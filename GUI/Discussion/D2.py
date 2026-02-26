@@ -12,7 +12,6 @@ title = tk.Label(window,
                  )
 title.pack()
 
-
 def sad_pic():
     new_img = tk.PhotoImage(file=r"C:\Users\Admin\OneDrive\Desktop\ITCS102_1A\ITCS103_1A\discussion\D2_photo\sad.png")
     new_img = new_img.subsample(4, 4)
