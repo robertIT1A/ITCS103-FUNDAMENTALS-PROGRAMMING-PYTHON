@@ -49,8 +49,6 @@ entry2.grid(row=2,column=0,columnspan=2,pady=2)
 input1.grid(row=1,column=3,columnspan=2,pady=2)
 input2.grid(row=2,column=3,columnspan=2,pady=2)
 
-# frame = tk.Frame(window)
-# frame.grid(row=3,column=1,columnspan=3,rowspan=2)
 
 btn_add = tk.Button(window,text="Add",command=add,background="blue",fg="white")
 btn_Subtract = tk.Button(window,text="Subtract",command=sub,background="blue",fg="white")
