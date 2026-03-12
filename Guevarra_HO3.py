@@ -3,7 +3,6 @@ import tkinter as tk
 window = tk.Tk()
 window.title("Simple Claculator")
 window.config(bg="black")
-# window.geometry("300x300")
 window.resizable(False,False)
 
 def add():
