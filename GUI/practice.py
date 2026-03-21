@@ -6,6 +6,7 @@ window.title("Enrollment Form")
 # window.geometry("500x500")
 window.resizable(True,True)
 
+
 header =tk.Label(window, text="Enrollment Form",
                  font=(25))
 header.grid(row=0, column=0,columnspan=3,pady=10)
@@ -57,8 +58,13 @@ submit.grid(row=2,column=2,columnspan=2,rowspan=2)
 
 
 
-# new window
+# memu
 
-popup = tk.Toplevel(window)
-popup.transient(window)
+menu_bar = tk.Menu(window) # menu variable
+window.config(menu=menu_bar) # lalagay mo sa window config
+file_menu = tk.Menu(menu_bar, tearoff=1) # para pagpinindot ito lalabas
+
+file_menu.add_command(label="Open") # para sa mga lalabas
+menu_bar.add_cascade(label="File", menu=file_menu) # to show
+
 window.mainloop()
