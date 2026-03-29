@@ -3,9 +3,17 @@ import tkinter as tk
 window = tk.Tk()
 window.title("Tiktak")
 
+lagay = tk.Entry(window)
+lagay.grid(row=2, column=0)
+
 def pili(target_btn):
-    lagay = tk.Entry(window)
-    if user press x or o
+    user_input = lagay.get().upper() # .upper() makes 'x' into 'X'
+    
+    if user_input == "X" or user_input == "O":
+        target_btn.config(text=user_input)
+        lagay.delete(0, tk.END) # Optional: Clear the box after clicking
+    else:
+        print("Please only type X or O!")
 
 head = tk.Label(window,text="Tic Tac Toe")
 
