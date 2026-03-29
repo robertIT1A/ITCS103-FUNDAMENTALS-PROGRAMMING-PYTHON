@@ -7,11 +7,11 @@ lagay = tk.Entry(window)
 lagay.grid(row=2, column=0)
 
 def pili(target_btn):
-    user_input = lagay.get().upper() # .upper() makes 'x' into 'X'
+    user_input = lagay.get().upper()
     
     if user_input == "X" or user_input == "O":
         target_btn.config(text=user_input)
-        lagay.delete(0, tk.END) # Optional: Clear the box after clicking
+        lagay.delete(0, tk.END)
     else:
         print("Please only type X or O!")
 
