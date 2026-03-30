@@ -12,8 +12,15 @@ def validate():
     else:
         sub = "not sub"
 
-    under = tk.Label(window,text=f"{name}{email}{raido}{sub}")
-    under.grid(row=5,column=0)
+    # under = tk.Label(window,text=f"{name}{email}{raido}{sub}")
+    # under.grid(row=5,column=0)
+
+    popup =tk.Toplevel(window)
+    popup.title("Result")
+
+    names = tk.Listbox(popup,selectmode="single")
+    names.insert(1,f"{name} - {email}  ({raido} | {sub})")
+    names.grid(row=0,column=0)
 
 
 # loob
