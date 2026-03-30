@@ -12,8 +12,6 @@ def validate():
     else:
         sub = "not sub"
 
-    # under = tk.Label(window,text=f"{name}{email}{raido}{sub}")
-    # under.grid(row=5,column=0)
 
     popup =tk.Toplevel(window)
     popup.title("Result")
