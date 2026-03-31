@@ -46,11 +46,11 @@ def regester():
     popup.transient(window)
     popup.config(bg="green")
 
-    head = tk.Label(popup, text="Register")
+    head = tk.Label(popup, text="Register",bg="green",fg="white")
     head.grid(row=0,column=0,columnspan=3)
 
-    user = tk.Label(popup, text="Username:")
-    passw = tk.Label(popup, text="Password:")
+    user = tk.Label(popup, text="Username:",bg="green",fg="white")
+    passw = tk.Label(popup, text="Password:",bg="green",fg="white")
     user_entry = tk.Entry(popup)
     pass_entry = tk.Entry(popup,show="*")
     user.grid(row=1,column=0)
@@ -59,9 +59,9 @@ def regester():
     pass_entry.grid(row=2,column=1)
 
     check = tk.IntVar()
-    shows = tk.Checkbutton(popup,text="Show PassWord",variable=check,onvalue=1,offvalue=0,command=show)
+    shows = tk.Checkbutton(popup,text="Show PassWord",variable=check,onvalue=1,offvalue=0,command=show,bg="green",fg="white")
     shows.grid(row=3,column=0)
-    btn = tk.Button(popup,text="Register",command=submit)
+    btn = tk.Button(popup,text="Register",command=submit,bg="green",fg="white")
     btn.grid(row=4,column=0,columnspan=3)
 
     
@@ -129,4 +129,3 @@ Log_in.pack(ipadx=30)
 
 
 window.mainloop()
-
