@@ -20,14 +20,24 @@ pas1 = []
 def regester():
     
     def submit():
-        log()
+        
         user = user_entry.get()
         word = pass_entry.get()
         acc.append(user)
         pas.append(word)
         print(acc, pas)
-        now = tk.Label(popup, text="You are now Register",bg="green",fg="white")
-        now.grid(row=5,column=0,columnspan=3)
+        print(len(word))
+
+        if len(word) >= 8:
+            now = tk.Label(popup, text="You are now Register",bg="green",fg="white")
+            now.grid(row=5,column=0,columnspan=3)
+            log()
+        elif len(word) <= 0:
+            now = tk.Label(popup, text="Please Provide a Password",bg="green",fg="white")
+            now.grid(row=5,column=0,columnspan=3)
+        else:
+            now = tk.Label(popup, text="Your Password Should be 8 Characters",bg="green",fg="white")
+            now.grid(row=5,column=0,columnspan=3)
 
         
 
