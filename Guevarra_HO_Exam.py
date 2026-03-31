@@ -20,13 +20,13 @@ pas1 = []
 def regester():
     
     def submit():
-        
+        log()
         user = user_entry.get()
         word = pass_entry.get()
         acc.append(user)
         pas.append(word)
         print(acc, pas)
-        now = tk.Label(popup, text="You are now Register")
+        now = tk.Label(popup, text="You are now Register",bg="green",fg="white")
         now.grid(row=5,column=0,columnspan=3)
 
         
@@ -74,10 +74,10 @@ def log():
    
 
         if acc1 == acc and pas1 == pas:
-            cor = tk.Label(popup,text="Access Granted")
+            cor = tk.Label(popup,text="Access Granted",bg="red",fg="white")
             cor.grid(row=5,column=0,columnspan=3)
         elif acc1 != acc or pas1 != pas:
-            cor = tk.Label(popup,text="Access Denied")
+            cor = tk.Label(popup,text="Access Denied",bg="red",fg="white")
             cor.grid(row=5,column=0,columnspan=3)
                 
         
