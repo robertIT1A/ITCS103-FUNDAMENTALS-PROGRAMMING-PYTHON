@@ -97,11 +97,11 @@ def log():
     popup.transient(window)
     popup.config(bg="red")
 
-    head = tk.Label(popup, text="Log in")
+    head = tk.Label(popup, text="Log in",bg="red",fg="white")
     head.grid(row=0,column=0,columnspan=3)
 
-    user = tk.Label(popup, text="Username:")
-    passw = tk.Label(popup, text="Password:")
+    user = tk.Label(popup, text="Username:",bg="red",fg="white")
+    passw = tk.Label(popup, text="Password:",bg="red",fg="white")
     user_entry = tk.Entry(popup)
     pass_entry = tk.Entry(popup,show="*")
     user.grid(row=1,column=0)
@@ -110,9 +110,9 @@ def log():
     pass_entry.grid(row=2,column=1)
 
     check = tk.IntVar()
-    shows = tk.Checkbutton(popup,text="Show PassWord",variable=check,onvalue=1,offvalue=0,command=show)
+    shows = tk.Checkbutton(popup,text="Show PassWord",variable=check,onvalue=1,offvalue=0,command=show,bg="red",fg="white")
     shows.grid(row=3,column=0)
-    btn = tk.Button(popup,text="Log in",command=ass)
+    btn = tk.Button(popup,text="Log in",command=ass,bg="red",fg="white")
     btn.grid(row=4,column=0,columnspan=3)
 
 
