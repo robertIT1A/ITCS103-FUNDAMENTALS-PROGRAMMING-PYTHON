@@ -1,4 +1,4 @@
-Import os
+import os
 
 current = os. getcwd()
 print(current)
