@@ -9,10 +9,10 @@ ws = wb.active
 ws['A1'] = "Product"
 ws['B1'] = "Sales"
 ws.append(["Apples", 50])
-# ws.append(["Oranges", 80])
+ws.append(["Oranges", 80])
 
 # 3. Simple Math (Formula)
-# ws['B4'] = "=SUM(B2:B3)"
+ws['B4'] = "=SUM(B2:B3)"
 
 
 # 5. Save
