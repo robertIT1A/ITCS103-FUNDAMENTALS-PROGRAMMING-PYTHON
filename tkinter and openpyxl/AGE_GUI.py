@@ -13,6 +13,19 @@ def display():
     for row in sheet.iter_rows(min_row=2,values_only=True):
         tree.insert("",tk.END,values=row)
 
+def input_val():
+    first = fname_entry.get()
+    middle = mname_entry.get()
+    last = lname_entry.get()
+    birth = birth_entry.get()
+
+    if not first or not middle or not last or not birth:
+        messagebox.showerror("Error", "All field are required.")
+        return False
+    if not birth.isdigit():
+        messagebox.showerror("Error", "Birthyear must be a number.")
+        return False
+
 window=tk.Tk()
 window.title("Age Calculator")
 window.configure(bg="lightgreen")
@@ -57,7 +70,7 @@ birthyear_label.grid(row=5, column=2,columnspan=2)
 update_btn = tk.Button(window, text="Update")
 update_btn.grid(row=6, column=2)
 
-button= tk.Button(window,text="Submit",font=("Poppins",12,"bold"),bg="lightpink",)
+button= tk.Button(window,text="Submit",font=("Poppins",12,"bold"),bg="lightpink", command=input_val)
 button.grid(row=6, column=0, columnspan=6,pady=(10,20))
 
 delete_btn = tk.Button(window, text="Delete",  bg="red", fg="white")
