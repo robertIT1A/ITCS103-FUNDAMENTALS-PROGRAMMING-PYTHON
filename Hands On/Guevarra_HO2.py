@@ -8,7 +8,6 @@ window.resizable(False,True)
 window.configure(bg="#A020F0")
 
 
-
 def profile():
     title = pogi.Label(window,text="Student Profile",
                     font=("Poppins",55),
